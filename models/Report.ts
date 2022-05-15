@@ -1,14 +1,14 @@
 import mongoose, { Schema } from "mongoose";
-import { Lesson } from "../types";
+import { Report } from "../types";
 
 const Report = new Schema({
-  student: { type: Schema.Types.ObjectId, ref: "Student", required: true },
-  hasTest: { type: Boolean, required: true },
+  studentID: { type: String, required: true },
+  hasTestPhoto: { type: Boolean, required: true },
   testPhoto: { type: String },
   sinceDay: { type: Date, required: true },
   symptoms: [{ type: String, required: true }],
   attendedSchool: { type: Boolean, required: true },
-  lessonsSelected: [
+  lessonsAttended: [
     {
       lesson: { type: Schema.Types.ObjectId, ref: "Lesson", required: true },
       days: [{ type: Date, required: true }],
@@ -17,4 +17,4 @@ const Report = new Schema({
   approved: { type: Boolean, required: true, default: false },
 });
 
-export default mongoose.model<Lesson>("Report", Report);
+export default mongoose.model<Report>("Report", Report);

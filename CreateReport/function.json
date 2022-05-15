@@ -15,5 +15,5 @@
       "name": "$return"
     }
   ],
-  "scriptFile": "../dist/GetSchedule/index.js"
+  "scriptFile": "../dist/CreateReport/index.js"
 }

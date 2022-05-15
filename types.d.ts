@@ -10,7 +10,7 @@ export interface IStudent {
   email: string;
   telephone: string;
   password: string;
-  schedule: Array<ILessonDay>
+  schedule: Array<ILessonDay>;
 }
 
 export interface Student extends IStudent, Document {}
@@ -27,3 +27,21 @@ interface ILessonDay {
 }
 
 export interface Lesson extends ILesson, Document {}
+
+export interface IReport {
+  studentID: string;
+  hasTest: boolean;
+  testPhoto: string;
+  sinceDay: Date;
+  symptoms: string;
+  attendedSchool: boolean;
+  lessonsAttended: lessonReference[];
+  approved: boolean;
+}
+
+interface lessonReference {
+  lesson: string;
+  days: Date[];
+}
+
+export interface Report extends IReport, Document {}
