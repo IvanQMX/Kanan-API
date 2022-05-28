@@ -31,10 +31,10 @@ export interface Lesson extends ILesson, Document {}
 export interface IReport {
   date: Date;
   studentID: string;
-  hasTest: boolean;
+  hasTestPhoto: boolean;
   testPhoto: string;
   sinceDay: Date;
-  symptoms: string;
+  symptoms: string[];
   attendedSchool: boolean;
   lessonsAttended: lessonReference[];
   approved: boolean;

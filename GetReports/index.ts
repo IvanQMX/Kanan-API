@@ -9,7 +9,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
   if (!connected) {
     return send(503, "Database Unavailable");
   }
-  const reports = await Report.find({},{studentID:1, date: 1, hasTest: 1, sinceDay: 1, symptoms: 1})
+  const reports = await Report.find({},{studentID:1, date: 1, hasTestPhoto: 1, sinceDay: 1, symptoms: 1})
   return send(200, reports);
 };
 
