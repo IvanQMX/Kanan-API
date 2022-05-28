@@ -29,6 +29,7 @@ interface ILessonDay {
 export interface Lesson extends ILesson, Document {}
 
 export interface IReport {
+  date: Date;
   studentID: string;
   hasTest: boolean;
   testPhoto: string;
