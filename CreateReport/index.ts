@@ -42,6 +42,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     return { lesson: _id, days: daysDate };
   });
   const report = {
+    date: new Date(),
     studentID,
     hasTestPhoto,
     testPhoto,

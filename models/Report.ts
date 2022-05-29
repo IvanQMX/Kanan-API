@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 import { Report } from "../types";
 
 const Report = new Schema({
-  date: {type: Date, default: new Date()},
+  date: {type: Date, required: true},
   studentID: { type: String, required: true },
   hasTestPhoto: { type: Boolean, required: true },
   testPhoto: { type: String },
