@@ -5,6 +5,7 @@ export interface Response {
 
 export interface IStudent {
   name: string;
+  studentID: string;
   paternalSurname: string;
   maternalSurname: string;
   email: string;
