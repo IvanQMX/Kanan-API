@@ -10,7 +10,8 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "mongoose": "^6.3.0"
+    "mongoose": "^6.3.0",
+    "node-mailjet": "^3.4.1"
   },
   "devDependencies": {
     "@azure/functions": "^2.0.0",
