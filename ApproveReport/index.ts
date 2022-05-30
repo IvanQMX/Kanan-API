@@ -29,7 +29,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     populate: [{ path: "students", select: "name email studentID", model: "Student" }],
   });
   if (!report.attendedSchool) {
-    send(200, "Report Approved");
+    return send(200, "Report Approved");
   }
   const mailjet = Mailjet.connect(MailjetPublicKey, MailjetPrivateKey);
   for (const lessonReference of report.lessonsAttended) {
